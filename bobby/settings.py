@@ -122,3 +122,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ALPHA_ADVANTAGE_API_KEY = 'demo'
+
+OPEN_WEATHER_API_KEY = 'demo'
