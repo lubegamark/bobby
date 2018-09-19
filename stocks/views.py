@@ -1,11 +1,11 @@
 import requests
 from django.http import HttpResponse
-
+from django.conf import settings
 
 def get_stock(request, symbol):
     BASE_URL = 'https://www.alphavantage.co/query'
     function = 'TIME_SERIES_DAILY'
-    api_key = 'demo'
+    api_key = settings.ALPHA_ADVANTAGE_API_KEY
     url = '{}?function={}&symbol={}&apikey={}'.format(
         BASE_URL,
         function,

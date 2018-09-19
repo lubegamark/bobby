@@ -1,4 +1,4 @@
-# flake8: noqa
+# flake8: noqaf
 """
 Django settings for bobby project.
 
@@ -120,3 +120,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ALPHA_ADVANTAGE_API_KEY = 'demo'
