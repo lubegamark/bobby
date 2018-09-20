@@ -36,9 +36,9 @@ def index(request):
     if request.method == 'POST':
         stock = get_stock(request.POST['symbol'])
         symbol = request.POST['symbol']
-        city = get_weather(request.POST['city'])
+        weather = get_weather(request.POST['city'])
+        city = request.POST['city']
         currency = request.POST['currency']
-        print(stock['Time Series (Daily)'][datetime.datetime.now().strftime("%Y-%m-%d")])
         context = {
             "stock": {
                 "price": stock['Time Series (Daily)'][datetime.datetime.now().strftime("%Y-%m-%d")]['1. open'],
@@ -48,7 +48,7 @@ def index(request):
                 },
             "weather": {
                 "city": city,
-                "temperature": city,
+                "temperature": weather["main"]["temp"],
             },
             "currency": {
                 "currency": currency,

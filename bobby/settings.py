@@ -128,3 +128,8 @@ STATICFILES_DIRS = [
 ALPHA_ADVANTAGE_API_KEY = 'demo'
 
 OPEN_WEATHER_API_KEY = 'demo'
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
