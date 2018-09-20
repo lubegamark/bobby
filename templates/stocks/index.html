@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -11,19 +12,19 @@
     <!-- Title -->
     <title>Appy App Landing Template.</title>
     <!-- Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+            <link rel="apple-touch-icon" href="{% static "images/apple-touch-icon.png" %}">
+    <link rel="shortcut icon" type="image/ico" href="{% static "images/favicon.ico" %}" />
     <!-- Plugin-CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/linearicons.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/linearicons.css" %}">
+    <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+    <link rel="stylesheet" href="{% static "css/animate.css" %}">
     <!-- Main-Stylesheets -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="{% static "css/normalize.css" %}">
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    <link rel="stylesheet" href="{% static "css/responsive.css" %}">
+    <script src="{% static "js/vendor/modernizr-2.8.3.min.js" %}"></script>
     <!--[if lt IE 9]>
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -44,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a>
+                <a class="navbar-brand" href="#"><img src="{% static "images/logo.png" %}" alt="Logo"></a>
             </div>
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
@@ -70,7 +71,7 @@
             <div class="row">
                 <div class="col-xs-12 hidden-sm col-md-5">
                     <figure class="mobile-image wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="images/header-mobile.png" alt="">
+                        <img src="{% static "images/header-mobile.png" %}" alt="">
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-7">
@@ -93,7 +94,7 @@
             <div class="row">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div class="page-title text-center">
-                        <img src="images/about-logo.png" alt="About Logo">
+                        <img src="{% static "images/about-logo.png" %}" alt="About Logo">
                         <div class="space-20"></div>
                         <h5 class="title">About Appy</h5>
                         <div class="space-30"></div>
@@ -125,7 +126,7 @@
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <figure class="mobile-image">
-                        <img src="images/progress-phone.png" alt="">
+                        <img src="{% static "images/progress-phone.png" %}" alt="">
                     </figure>
                 </div>
             </div>
@@ -138,9 +139,9 @@
             <div class="row">
                 <div class="col-xs-12 col-md-6">
                     <div class="video-photo">
-                        <img src="images/video-image.jpg" alt="">
+                        <img src="{% static "images/video-image.jpg" %}" alt="">
                         <a href="https://www.youtube.com/watch?v=ScrDhTsX0EQ" class="popup video-button">
-                            <img src="images/play-button.png" alt="">
+                            <img src="{% static "images/play-button.png" %}" alt="">
                         </a>
                     </div>
                 </div>
@@ -204,7 +205,7 @@
                 </div>
                 <div class="hidden-xs hidden-sm col-md-4">
                     <figure class="mobile-image">
-                        <img src="images/feature-image.png" alt="Feature Photo">
+                        <img src="{% static "images/feature-image.png" %}" alt="Feature Photo">
                     </figure>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
@@ -254,7 +255,7 @@
                     <div class="team-slide">
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="images/team-1.png" alt="">
+                                <img src="{% static "images/team-1.png" %}" alt="">
                             </div>
                             <h4>Ashekur Rahman</h4>
                             <h6 class="position">Art Dirrector</h6>
@@ -262,7 +263,7 @@
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="images/team-2.jpg" alt="">
+                                <img src="{% static "images/team-2.jpg" %}" alt="">
                             </div>
                             <h4>Ashekur Rahman</h4>
                             <h6 class="position">Art Dirrector</h6>
@@ -270,7 +271,7 @@
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="images/team-3.jpg" alt="">
+                                <img src="{% static "images/team-3.jpg" %}" alt="">
                             </div>
                             <h4>Ashekur Rahman</h4>
                             <h6 class="position">Art Dirrector</h6>
@@ -278,7 +279,7 @@
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="images/team-1.png" alt="">
+                                <img src="{% static "images/team-1.png" %}" alt="">
                             </div>
                             <h4>Ashekur Rahman</h4>
                             <h6 class="position">Art Dirrector</h6>
@@ -286,7 +287,7 @@
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="images/team-2.jpg" alt="">
+                                <img src="{% static "images/team-2.jpg" %}" alt="">
                             </div>
                             <h4>Ashekur Rahman</h4>
                             <h6 class="position">Art Dirrector</h6>
@@ -294,7 +295,7 @@
                         </div>
                         <div class="team-box">
                             <div class="team-image">
-                                <img src="images/team-3.jpg" alt="">
+                                <img src="{% static "images/team-3.jpg" alt="">
                             </div>
                             <h4>Ashekur Rahman</h4>
                             <h6 class="position">Art Dirrector</h6>
@@ -312,20 +313,20 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 gallery-slider">
                     <div class="gallery-slide">
-                        <div class="item"><img src="images/gallery-1.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-2.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-3.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-4.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-1.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-2.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-3.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-1.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-2.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-3.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-4.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-1.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-2.jpg" alt=""></div>
-                        <div class="item"><img src="images/gallery-3.jpg" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-1.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-2.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-3.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-4.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-1.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-2.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-3.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-1.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-2.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-3.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-4.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-1.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-2.jpg" %}" alt=""></div>
+                        <div class="item"><img src="{% static "images/gallery-3.jpg" %}" alt=""></div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-5 col-lg-3">
@@ -398,7 +399,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 hidden-sm">
                     <figure class="mobile-image">
-                        <img src="images/download-image.png" alt="">
+                        <img src="{% static "images/download-image.png" %}" alt="">
                     </figure>
                 </div>
                 <div class="col-xs-12 col-md-6 section-padding">
@@ -406,8 +407,8 @@
                     <div class="space-20"></div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam possimus eaque magnam eum praesentium unde.</p>
                     <div class="space-60"></div>
-                    <a href="#" class="bttn-white sq"><img src="images/apple-icon.png" alt="apple icon"> Apple Store</a>
-                    <a href="#" class="bttn-white sq"><img src="images/play-store-icon.png" alt="Play Store Icon"> Play Store</a>
+                    <a href="#" class="bttn-white sq"><img src="{% static "images/apple-icon.png" %}" alt="apple icon"> Apple Store</a>
+                    <a href="#" class="bttn-white sq"><img src="{% static "images/play-store-icon.png" %}" alt="Play Store Icon"> Play Store</a>
                 </div>
             </div>
         </div>
@@ -651,18 +652,18 @@
     </footer>
     <!-- Footer-Area-End -->
     <!--Vendor-JS-->
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/vendor/jquery-ui.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="{% static "js/vendor/jquery-1.12.4.min.js" %}"></script>
+    <script src="{% static "js/vendor/jquery-ui.js" %}"></script>
+    <script src="{% static "js/vendor/bootstrap.min.js" %}"></script>
     <!--Plugin-JS-->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/contact-form.js"></script>
-    <script src="js/ajaxchimp.js"></script>
-    <script src="js/scrollUp.min.js"></script>
-    <script src="js/magnific-popup.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "js/contact-form.js" %}"></script>
+    <script src="{% static "js/ajaxchimp.js" %}"></script>
+    <script src="{% static "js/scrollUp.min.js" %}"></script>
+    <script src="{% static "js/magnific-popup.min.js" %}"></script>
+    <script src="{% static "js/wow.min.js" %}"></script>
     <!--Main-active-JS-->
-    <script src="js/main.js"></script>
+    <script src="{% static "js/main.js" %}"></script>
 </body>
 
 </html>
