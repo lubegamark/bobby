@@ -19,7 +19,7 @@ def get_stock(request, symbol):
 
 def get_weather(request, town):
     BASE_URL = 'https://api.openweathermap.org/data/2.5/weather'
-    api_key = settings.ALPHA_ADVANTAGE_API_KEY
+    api_key = settings.OPEN_WEATHER_API_KEY
     url = '{}?q={}&APPID={}'.format(
         BASE_URL,
         town,
