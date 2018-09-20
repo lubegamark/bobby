@@ -33,4 +33,25 @@ def get_weather(request, town):
 
 def index(request):
     context = {}
+    if request.method == 'POST':
+        print(request.POST)
+        symbol = request.POST['symbol']
+        city = request.POST['city']
+        currency = request.POST['currency']
+        context = {
+            "stock": {
+                "price": symbol,
+                "symbol": symbol,
+                "high": symbol,
+                "low": symbol
+                },
+            "weather": {
+                "city": city,
+                "temperature": city,
+            },
+            "currency": {
+                "currency": currency,
+                "price": currency
+                }
+        }
     return render(request, 'stocks/index.html', context)
