@@ -50,7 +50,7 @@
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
                     <li><a href="#stocks_page">Stocks</a></li>
-                    <li><a href="#price_page">Pricing</a></li>
+                    <li><a href="#current_page">Results</a></li>
                 </ul>
                 <div class="right-button hidden-xs">
                     <a href="#">Sign Up</a>
@@ -67,8 +67,9 @@
                     <div class="subscribe-form text-center">
                         <h3 class="blue-color">Get Stock Prices</h3>
                         <div class="space-20"></div>
-                        <form action="">
-                            <input type="text" class="control" placeholder="Stock Ticker" required="required" name="stock" >
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <input type="text" class="control" placeholder="Stock Ticker" required="required" name="symbol" >
                             <br/>
                             <br/>
                             <input type="text" class="control" placeholder="City" required="required" name="city" >
@@ -86,13 +87,12 @@
     </div>
     <!-- Stock-Form-Area -->
     <!--Price-Area -->
-    <section class="section-padding price-area" id="price_page">
+    <section class="section-padding price-area" id="current_page">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="page-title text-center">
-                        <h5 class="title">Pricing Plan</h5>
-                        <h3 class="dark-color">Our Awesome Pricing Plan</h3>
+                        <h5 class="title">Current State</h5>
                         <div class="space-60"></div>
                     </div>
                 </div>
@@ -101,23 +101,17 @@
                 <div class="col-xs-12 col-sm-4">
                     <div class="price-box">
                         <div class="price-header">
-                            <div class="price-icon">
-                                <span class="lnr lnr-rocket"></span>
-                            </div>
-                            <h4 class="upper">Free</h4>
+                            <h4 class="upper">Stock</h4>
                         </div>
                         <div class="price-body">
                             <ul>
-                                <li>Easy Installations</li>
-                                <li>Unlimited support</li>
-                                <li>Uniqe Elements</li>
+                                <li>{{stock.symbol}}</li>
+                                <li>High: {{stock.high}}</li>
+                                <li>Low: {{stock.low}}</li>
                             </ul>
                         </div>
                         <div class="price-rate">
-                            <sup>&#36;</sup> <span class="rate">0</span> <small>/Month</small>
-                        </div>
-                        <div class="price-footer">
-                            <a href="#" class="bttn-white">Purchase</a>
+                            <span class="rate">{{stock.price}}</span> 
                         </div>
                     </div>
                     <div class="space-30 hidden visible-xs"></div>
@@ -125,48 +119,35 @@
                 <div class="col-xs-12 col-sm-4">
                     <div class="price-box">
                         <div class="price-header">
-                            <div class="price-icon">
-                                <span class="lnr lnr-diamond"></span>
-                            </div>
-                            <h4 class="upper">Medium</h4>
+                            <h4 class="upper">Weather</h4>
                         </div>
                         <div class="price-body">
                             <ul>
-                                <li>Easy Installations</li>
-                                <li>Unlimited support</li>
-                                <li>Free Forever</li>
+                                <li>City: {{weather.city}}</li>
+                                <li>Temperature: {{weather.temperature}}</li>
                             </ul>
                         </div>
                         <div class="price-rate">
-                            <sup>&#36;</sup> <span class="rate">49</span> <small>/Month</small>
-                        </div>
-                        <div class="price-footer">
-                            <a href="#" class="bttn-white">Purchase</a>
-                        </div>
+                                <span class="rate">{{weather.temperature}}</span> 
+                            </div>
+
                     </div>
                     <div class="space-30 hidden visible-xs"></div>
                 </div>
                 <div class="col-xs-12 col-sm-4">
                     <div class="price-box">
                         <div class="price-header">
-                            <div class="price-icon">
-                                <span class="lnr lnr-pie-chart"></span>
-                            </div>
-                            <h4 class="upper">Business</h4>
+                            <h4 class="upper">Currency</h4>
                         </div>
                         <div class="price-body">
                             <ul>
-                                <li>Easy Installations</li>
-                                <li>Unlimited support</li>
-                                <li>Free Forever</li>
+                                <li>Currency: {{currency.currency}}</li>
                             </ul>
                         </div>
                         <div class="price-rate">
-                            <sup>&#36;</sup> <span class="rate">99</span> <small>/Month</small>
+                            <span class="rate">{{currency.price}}</span>
                         </div>
-                        <div class="price-footer">
-                            <a href="#" class="bttn-white">Purchase</a>
-                        </div>
+
                     </div>
                 </div>
             </div>
