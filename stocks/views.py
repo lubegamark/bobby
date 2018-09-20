@@ -1,6 +1,7 @@
 import requests
 from django.http import HttpResponse
 from django.conf import settings
+from django.shortcuts import render
 
 def get_stock(request, symbol):
     BASE_URL = 'https://www.alphavantage.co/query'
@@ -29,3 +30,7 @@ def get_weather(request, town):
 
     html = "<html><body>The data is <br/>{}.</body></html>".format(r.json())
     return HttpResponse(html)
+
+def index(request):
+    context = {}
+    return render(request, 'stocks/index.html', context)
